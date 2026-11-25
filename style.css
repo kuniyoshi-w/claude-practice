@@ -1,0 +1,115 @@
+/* ===== 基本設定 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  background: #fbfcff;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー（名前） ===== */
+.hero {
+  background: linear-gradient(135deg, #a8c8ff, #c9b8ff);
+  color: #2f3a6b;
+  text-align: center;
+  padding: 64px 16px 80px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 4px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+/* ===== カード一覧 ===== */
+.container {
+  max-width: 900px;
+  margin: -48px auto 0;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-wide {
+  grid-column: 1 / -1;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  color: #5b6bef;
+  border-bottom: 2px solid #e6e9f5;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+/* ===== 趣味（箇条書き） ===== */
+.hobby-list {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+
+.hobby-list li {
+  margin-bottom: 4px;
+}
+
+.hobby-list li::marker {
+  color: #5b6bef;
+}
+
+/* ===== フッター ===== */
+footer {
+  text-align: center;
+  padding: 40px 16px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+}
